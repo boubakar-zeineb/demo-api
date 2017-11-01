@@ -1,0 +1,19 @@
+
+p-dropdown{
+    padding-left: 20px;
+    width: 300px
+}
+label[for=color] {
+    padding-left: 100px;
+}
+
+.seemore{
+    padding-top:20px;
+}
+.wrapper {
+    position: relative;
+}
+
+#input {
+    padding-left: 48px;
+}

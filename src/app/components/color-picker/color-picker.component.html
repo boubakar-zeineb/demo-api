@@ -1,0 +1,18 @@
+<div class="col-4" style="text-align : center">
+  <label>Handwriting :</label>
+  <p-dropdown [style]="{'width':'150px'}" [options]="handwritings" [(ngModel)]="selectedHandWrite" placeholder="Handwriting"></p-dropdown>
+  <label for="color">Choose your color : </label>
+  <p-colorPicker [(ngModel)]="color" ></p-colorPicker> <b>{{color}}</b>
+
+</div>
+
+<div class="seemore">
+  <p-accordion>
+    <p-accordionTab header="See advanced settings">
+      <app-advanced-settings [handWriting_id]="selectedHandWrite" (outgoingData)='handleEvent($event)' [color]="color"></app-advanced-settings>
+    </p-accordionTab>
+</p-accordion>
+</div>
+<div class="seemore">
+  <app-writing [dhw]="dhw"></app-writing>
+</div>

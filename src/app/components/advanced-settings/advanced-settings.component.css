@@ -1,0 +1,13 @@
+label[for=type] {
+    padding-left: 50px;
+}
+.wrapper span {
+    position: absolute;
+    left: 2px;
+}
+.in{
+    width: 70px;
+}
+.ui-g{
+    padding-top: 20px;
+}

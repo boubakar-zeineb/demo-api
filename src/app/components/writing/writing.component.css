@@ -1,0 +1,17 @@
+.padding {
+    padding-top: 20px;
+}
+#outer
+{
+    padding-left: 205px;
+    text-align: right;
+}
+.inner
+{
+    display: inline-block;
+}
+embed {
+    height: 260px;
+    width: 500px;
+    z-index: 1;
+}

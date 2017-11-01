@@ -1,0 +1,60 @@
+<p-selectButton [options]="typeOutput" (click)="sendData()" [(ngModel)]="selectedTypeOutput"></p-selectButton>
+<label for="type">Output as {{selectedTypeOutput | uppercase}}</label>
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <button pButton type="button" icon="" class="ui-button-primary" label="Size"></button>
+            <input type="text" [(ngModel)]="size" (ngModelChange)="sendData()" pInputText placeholder="pt">
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <button pButton type="button" icon="" class="ui-button-primary" label="Width"></button>
+            <input type="text" [(ngModel)]="width" (ngModelChange)="sendData()" pInputText placeholder="pt">
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <button pButton type="button" icon="" class="ui-button-primary" label="Random seed"></button>
+            <input type="text" [(ngModel)]="randomSeed" (ngModelChange)="sendData()" pInputText>
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <button pButton type="button" icon="" class="ui-button-primary" label="Line spacing var."></button>
+            <input type="text" [(ngModel)]="lineSpacingVar" (ngModelChange)="sendData()" pInputText>
+        </div>
+    </div>
+</div>
+
+
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <button pButton type="button" icon="" class="ui-button-primary" label="Color"></button>
+            <input type="text" [(ngModel)]="color" (ngModelChange)="sendData()" pInputText>
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <button pButton type="button" icon="" class="ui-button-primary" label="Height"></button>
+            <input type="text" [(ngModel)]="height" (ngModelChange)="sendData()" pInputText placeholder="pt">
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <button pButton type="button" icon="" class="ui-button-primary" label="Line spacing"></button>
+            <input type="text" [(ngModel)]="lineSpacing" (ngModelChange)="sendData()" pInputText>
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <button pButton type="button" icon="" class="ui-button-primary" label="Word spacing var."></button>
+            <input type="text" [(ngModel)]="wordSpacing" (ngModelChange)="sendData()" pInputText>
+        </div>
+    </div>
+</div>
