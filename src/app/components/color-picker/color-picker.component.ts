@@ -1,3 +1,4 @@
+import { ListHandwritingService } from './service/list-handwriting.service';
 import { AdvancedSettingsComponent } from '../advanced-settings/advanced-settings.component';
 import { Component, Input, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/primeng';
@@ -14,20 +15,22 @@ export class ColorPickerComponent implements OnInit {
   selectedHandWrite: string;
   dhw: DataHandWriting;
 
-  constructor() {
+  constructor(private handwritingsService: ListHandwritingService) {
   }
 
   ngOnInit() {
-    this.handwritings = [];
-    this.handwritings = [
-      {label: 'Select', value: null},
-      {label: 'Abbey', value: '8X3WQ4D800B0'},
-      {label: 'Ainslie', value: '5WGWVYD800X0'},
-      {label: 'Alder', value: '31SB3NWR00E0'},
-      {label: 'Allen', value: '5WGWVW8800VV'},
-      {label: 'Anne', value: '98N8PTWR00B6'}
-  ];
-  this.selectedHandWrite = this.handwritings[0].value;
+    this.handwritingsService.getHandwritings()
+    .subscribe((response) => {
+  console.log(response);
+  this.handwritings = [];
+
+    response.forEach(element => {
+    this.handwritings.push({label: element.title, value: element.id });
+    });
+
+    });
+
+  // this.selectedHandWrite = this.handwritings[0].value;
   this.color = '#ff0000';
   }
 

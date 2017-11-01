@@ -1,3 +1,4 @@
+import { ListHandwritingService } from './components/color-picker/service/list-handwriting.service';
 import { WritingService } from './components/writing/service/writing.service';
 import { HttpModule } from '@angular/http';
 import { FormGroup, FormsModule } from '@angular/forms';
@@ -43,7 +44,7 @@ import {GrowlModule} from 'primeng/primeng';
     InputTextareaModule,
     BrowserAnimationsModule
   ],
-  providers: [WritingService],
+  providers: [WritingService, ListHandwritingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
